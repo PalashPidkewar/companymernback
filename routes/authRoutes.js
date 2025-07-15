@@ -11,6 +11,6 @@ import { upload } from '../middleware/multermiddleware.js';
 route.post('/register',upload.single('photo'),register);
 route.post('/login',login);
 route.get('/allusers',protect, adminOnly,getRegisterUser);
-route.post('/password',protect,Updatepassword);
+route.put('/password',protect,Updatepassword);
 
 export default route;
